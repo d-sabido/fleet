@@ -161,6 +161,10 @@ const TeamsDropdown = ({
       borderRadius: "4px",
       boxShadow: "none",
       cursor: "pointer",
+      // Allow the trigger to shrink and truncate long team names.
+      minWidth: 0,
+      maxWidth: "100%",
+      overflow: "hidden",
       "&:hover": {
         boxShadow: "none",
         ".team-dropdown__single-value": {
@@ -212,6 +216,10 @@ const TeamsDropdown = ({
       fontWeight: "600",
       // omit grid-column-end for automatic width
       gridArea: "1/1/2",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+      maxWidth: "100%",
     }),
     dropdownIndicator: (baseStyles) => ({
       ...baseStyles,
@@ -232,6 +240,7 @@ const TeamsDropdown = ({
       border: 0,
       marginTop: 0,
       minWidth: "330px",
+      maxWidth: "500px",
       maxHeight: "none",
       position: "absolute",
       left: "0",
@@ -268,6 +277,9 @@ const TeamsDropdown = ({
       backgroundColor: getOptionBackgroundColor(state),
       fontWeight: state.isSelected ? "600" : "normal",
       color: COLORS["core-fleet-black"],
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
       "&:hover": {
         backgroundColor: state.isDisabled
           ? "transparent"

@@ -12,6 +12,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: $pad-medium;
+  }
+
+  &__description {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .empty-table__container {

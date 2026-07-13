@@ -1,1 +1,7 @@
-// All styling in customStyles part of react-select-5
+// Most styling is in the customStyles prop of react-select-5.
+// The wrapper needs to be shrinkable so the trigger can truncate long team
+// names when placed inside a flex row (e.g. the fleet-detail header).
+.team-dropdown-wrapper {
+  min-width: 0;
+  max-width: 100%;
+}
