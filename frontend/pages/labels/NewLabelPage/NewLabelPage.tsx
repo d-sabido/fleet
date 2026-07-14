@@ -13,7 +13,7 @@ import labelsAPI from "services/entities/labels";
 
 import {
   DEFAULT_USE_QUERY_OPTIONS,
-  MAX_ENTITY_NAME_LENGTH,
+  MAX_ENTITY_CHAR_LENGTH,
 } from "utilities/constants";
 // TODO - move this table config near here once expanded this logic to encompass editing and
 // therefore not longer needed anywhere else
@@ -549,7 +549,7 @@ const NewLabelPage = ({
         label="Name"
         placeholder="Label name"
         parseTarget
-        inputOptions={{ maxLength: MAX_ENTITY_NAME_LENGTH }}
+        inputOptions={{ maxLength: MAX_ENTITY_CHAR_LENGTH }}
       />
       <InputField
         error={formErrors.description?.message}
@@ -562,7 +562,7 @@ const NewLabelPage = ({
         type="textarea"
         placeholder="Label description (optional)"
         parseTarget
-        inputOptions={{ maxLength: MAX_ENTITY_NAME_LENGTH }}
+        inputOptions={{ maxLength: MAX_ENTITY_CHAR_LENGTH }}
       />
       <div className="form-field type-field">
         <div className="form-field__label">Type</div>
