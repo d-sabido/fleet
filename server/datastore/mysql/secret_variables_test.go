@@ -112,7 +112,7 @@ func testUpsertSecretVariables(t *testing.T, ds *Datastore) {
 	require.Empty(t, updatedNames)
 	updated, err := ds.GetSecretVariables(ctx, []string{"test1"})
 	require.NoError(t, err)
-	require.Len(t, original, 1)
+	require.Len(t, updated, 1)
 	require.Equal(t, original[0], updated[0])
 }
 
